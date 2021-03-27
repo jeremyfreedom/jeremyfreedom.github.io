@@ -1,0 +1,42 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 8%);
+  color: white;
+  font-size: 2rem;
+  font-family: "Roboto Mono", monospace;
+  transition: 1s background-color;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  /* color: rgb(125, 163, 217); */
+  transition: color 0.3s ease 0s;
+}
+
+a:hover {
+  color: rgb(176, 199, 232);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
