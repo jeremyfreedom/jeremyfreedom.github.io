@@ -24,6 +24,7 @@ const randomMessages = [
   "who's in control?",
   "no regrets",
   "sentience",
+  "a figment of your imagination",
 ];
 
 const randomNum = Math.floor(Math.random() * randomMessages.length);
