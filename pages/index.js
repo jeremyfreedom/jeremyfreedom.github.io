@@ -6,8 +6,35 @@ import {
   twitterIcon,
   mailIcon,
 } from "../components/SocialMediaIcons";
+import { useEffect } from "react";
+import TextScramble from "../lib/TextScramble";
+
+const randomMessages = [
+  "human, or idea?",
+  "are you awake?",
+  "we're all gonna make it",
+  "into the infinite",
+  "escaping the comfort zone",
+  "freedom of life",
+  "freedom from inhibitions",
+  "we are all one",
+  "it's an illusion",
+  "outside the mind",
+  "higher conscious",
+  "who's in control?",
+  "no regrets",
+  "sentience",
+];
+
+const randomNum = Math.floor(Math.random() * randomMessages.length);
 
 export default function Home() {
+  useEffect(() => {
+    const el = document.getElementById("title");
+    const headerFx = new TextScramble(el);
+    headerFx.setText(title.innerHTML);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,13 +45,17 @@ export default function Home() {
 
       <main className={styles.main}>
         <img src="/img/square.jpg" className={styles["portrait-logo"]} />
-        <h1 className={styles.title}>jeremyfreedom</h1>
+        <h1 id="title" className={styles.title}>
+          jeremyfreedom
+        </h1>
         <nav className={styles["social-media-icons"]}>
           {youtubeIcon} {instagramIcon} {twitterIcon}
           {mailIcon}
         </nav>
 
-        <p className={styles.description}>are you awake?</p>
+        <p className={`${styles.description} fade-in`}>
+          {randomMessages[randomNum]}
+        </p>
 
         <div className={styles.grid}>
           <a
@@ -45,8 +76,16 @@ export default function Home() {
             <h3>{instagramIcon} instagram &rarr;</h3>
             <p>
               showing off travels & only the good parts of my life to make you
-              feel shitty about yours
+              FOMO
             </p>
+          </a>
+
+          <a
+            href="https://discord.com/channels/484496726154280969/484496726741352450"
+            className={styles.card}
+          >
+            <h3>👥 discord &rarr;</h3>
+            <p>dead community channel</p>
           </a>
 
           <a
@@ -55,6 +94,11 @@ export default function Home() {
           >
             <h3>🖉 blog &rarr;</h3>
             <p>long form content that no one reads</p>
+          </a>
+
+          <a href="https://www.reddit.com/r/jFreedom" className={styles.card}>
+            <h3>👥 reddit &rarr;</h3>
+            <p>dead internet forum</p>
           </a>
 
           <a href="https://www.jbernier.com" className={styles.card}>
