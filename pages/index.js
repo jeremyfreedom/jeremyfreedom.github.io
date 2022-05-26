@@ -8,6 +8,7 @@ import {
 } from "../components/SocialMediaIcons";
 import { useEffect } from "react";
 import TextScramble from "../lib/TextScramble";
+import Link from "next/link";
 
 const randomMessages = [
   "human, or idea?",
@@ -50,7 +51,7 @@ export default function Home() {
           jeremyfreedom
         </h1>
         <nav className={styles["social-media-icons"]}>
-          {youtubeIcon} {instagramIcon} {twitterIcon}
+          {twitterIcon} {youtubeIcon} {instagramIcon}
           {mailIcon}
         </nav>
 
@@ -59,6 +60,13 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
+          <Link href="https://jsavage.xyz/">
+            <a className={styles.card}>
+              <h3>🖉 blog / email newsletter &rarr;</h3>
+              <p>long form content that no one reads</p>
+            </a>
+          </Link>
+
           <a
             href="https://www.youtube.com/c/JDiculous1"
             className={styles.card}
@@ -87,14 +95,6 @@ export default function Home() {
           >
             <h3>👥 discord &rarr;</h3>
             <p>dead community channel</p>
-          </a>
-
-          <a
-            href="https://jeremyfreedom.substack.com/archive"
-            className={styles.card}
-          >
-            <h3>🖉 blog &rarr;</h3>
-            <p>long form content that no one reads</p>
           </a>
 
           <a href="https://www.reddit.com/r/jFreedom" className={styles.card}>
